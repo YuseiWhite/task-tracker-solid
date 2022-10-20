@@ -26,11 +26,11 @@ const App: Component = () => {
 
     setTaskList([newTask, ...taskList()])
     taskInput.value = ''
+  }
 
-    const deleteTask = (taskId: string) => {
-      const newTaskList = taskList().filter((task) => task.id !== taskId)
-      setTaskList(newTaskList)
-    }
+  const deleteTask = (taskId: string) => {
+    const newTaskList = taskList().filter((task) => task.id !== taskId)
+    setTaskList(newTaskList)
   }
 
   return (
