@@ -26,13 +26,18 @@ const App: Component = () => {
 
     setTaskList([newTask, ...taskList()])
     taskInput.value = ''
+
+    const deleteTask = (taskId: string) => {
+      const newTaskList = taskList().filter((task) => task.id !== taskId)
+      setTaskList(newTaskList)
+    }
   }
 
   return (
     <div class="container mt-5 text-center">
       <h1 class="mb-4">What to do!</h1>
 
-      <form class="mb-5 row row-cols-2 justify-content-center">
+      <form class="mb-5 row row-cols-2 justify-content-center" onSubmit={(e) => addTask(e)}>
         <input type="text" class="input-group-text p-1 w-25" placeholder="Add task here..." id="taskInput" required />
 
         <button class="btn btn-primary ms-3 w-auto" type="submit">
