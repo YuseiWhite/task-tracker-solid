@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.2",
+    "prod": "^1.0.1",
     "solid-js": "^1.5.1"
   }
 }

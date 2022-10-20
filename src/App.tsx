@@ -6,11 +6,27 @@ import styles from './App.module.css';
 
 const App: Component = () => {
   type Task = {
+    id: string,
     text: string,
     completed: boolean,
   }
 
   const [taskList, setTaskList] = createSignal([] as Task[])
+
+  const addTask = (e: Event) => {
+    e.preventDefault()
+
+    const taskInput = document.querySelector('#taskInput') as HTMLInputElement
+
+    const newTask: Task = {
+      id: Math.random().toString(36).substring(2),
+      text: taskInput.value,
+      completed: false,
+    }
+
+    setTaskList([newTask, ...taskList()])
+    taskInput.value = ''
+  }
 
   return (
     <div class="container mt-5 text-center">
