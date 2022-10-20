@@ -1,9 +1,17 @@
-import type { Component } from 'solid-js';
+import { Component, createSignal } from 'solid-js';
 
 import logo from './logo.svg';
 import styles from './App.module.css';
 
+
 const App: Component = () => {
+  type Task = {
+    text: string,
+    completed: boolean,
+  }
+
+  const [taskList, setTaskList] = createSignal([] as Task[])
+
   return (
     <div class="container mt-5 text-center">
       <h1 class="mb-4">What to do!</h1>
