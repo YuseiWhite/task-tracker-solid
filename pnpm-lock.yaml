@@ -1,12 +1,14 @@
 lockfileVersion: 5.4
 
 specifiers:
+  bootstrap: ^5.2.2
   solid-js: ^1.5.1
   typescript: ^4.8.2
   vite: ^3.0.9
   vite-plugin-solid: ^2.3.0
 
 dependencies:
+  bootstrap: 5.2.2
   solid-js: 1.5.1
 
 devDependencies:
@@ -397,6 +399,12 @@ packages:
       '@babel/core': 7.18.6
       babel-plugin-jsx-dom-expressions: 0.33.12_@babel+core@7.18.6
     dev: true
+
+  /bootstrap/5.2.2:
+    resolution: {integrity: sha512-dEtzMTV71n6Fhmbg4fYJzQsw1N29hJKO1js5ackCgIpDcGid2ETMGC6zwSYw09v05Y+oRdQ9loC54zB1La3hHQ==}
+    peerDependencies:
+      '@popperjs/core': ^2.11.6
+    dev: false
 
   /browserslist/4.21.2:
     resolution: {integrity: sha512-MonuOgAtUB46uP5CezYbRaYKBNt2LxP0yX+Pmj4LkcDFGkn9Cbpi83d9sCjwQDErXsIJSzY5oKGDbgOlF/LPAA==}
