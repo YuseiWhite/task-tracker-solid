@@ -1,4 +1,4 @@
-import { Component, createSignal } from 'solid-js';
+import { Component, createSignal, For } from 'solid-js';
 
 import logo from './logo.svg';
 import styles from './App.module.css';
@@ -47,11 +47,15 @@ const App: Component = () => {
 
       <div>
         <h4 class="text-muted mb-4">Tasks</h4>
-        <div class="row row-cols-3 mb-3 justify-content-center">
-          <button class ="btn btn-danger w-auto">X</button>
-          <div class="bg-light p-2 mx-2">Push code to GitHub</div>
-          <input type="checkbox" role="button" class="form-check-input h-auto px-3" />
-        </div>
+        <For each={taskList()}>
+          {(task: Task) => (
+            <div class="row row-cols-3 mb-3 justify-content-center">
+              <button class ="btn btn-danger w-auto">X</button>
+              <div class="bg-light p-2 mx-2">{task.text}</div>
+              <input type="checkbox" checked={task.completed} role="button" class="form-check-input h-auto px-3" />
+            </div>
+          )}
+        </For>
       </div>
     </div>
   );
