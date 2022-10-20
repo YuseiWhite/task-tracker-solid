@@ -32,3 +32,7 @@ Your app is ready to be deployed!
 ## Deployment
 
 You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)
+
+## Reference
+
+https://blog.logrocket.com/build-task-tracker-solidjs-typescript/?ref=morioh.com&utm_source=morioh.com
